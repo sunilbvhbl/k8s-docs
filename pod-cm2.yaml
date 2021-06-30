@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx-app
+spec:
+  containers:
+    - name: c1
+      image: nginx
+      env:
+        - name: HOST7
+          valueFrom:
+            configMapKeyRef:
+              name: mycm1
+              key: HOST
+        - name: PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: mycm1
+              key: PASS

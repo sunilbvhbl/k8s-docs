@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tom-pod
+  labels:
+    app: tom-app
+spec:
+  containers:
+    - name: c2
+      image: tomcat
+  tolerations:
+    - key: type1
+      operator: Equal
+      value: master1
+      effect: NoExecute

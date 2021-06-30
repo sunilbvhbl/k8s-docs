@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployed
+  labels:
+    author: sunil
+    type: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: web
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        type: web
+    spec:
+      containers:
+        - name: nxing-pod
+          image: nginx

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: newdeploy
+  name: newdeploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: newdeploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: newdeploy
+    spec:
+      containers:
+      - image: tomcat
+        name: tomcat
+        resources: {}
+status: {}

@@ -1,0 +1,25 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  name: mycron
+spec:
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+      name: mycron
+    spec:
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          containers:
+          - command:
+            - sleep
+            - "10"
+            image: busybox
+            name: mycron
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: '* * * * *'
+status: {}

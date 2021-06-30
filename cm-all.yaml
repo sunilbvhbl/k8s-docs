@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: mycm
+data:
+  file1.conf: |
+    city=Mumbai
+    state=Maharashtra
+    Country=India
+    data=test
+  file2.conf: |
+    name: Aakash
+    age: 26
+    city: Montreal
+  HOST: localhost1
+  PASS: passwd
+  USERNAME: newuser
+  DATA: NEWDATA
